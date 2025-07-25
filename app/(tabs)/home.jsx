@@ -17,24 +17,26 @@ import { BlurView } from "expo-blur";
 // Update the import path or filename to match the actual file
 import logo from "../../assets/images/DineTimeLogo.png";
 import banner from "../../assets/images/homeBanner.png";
-import { collection, getDocs, query } from "firebase/firestore";
-import { db } from "../../config/firebaseConfig";
+// import { collection, getDocs, query } from "firebase/firestore";
+// import { db } from "../../config/firebaseConfig";
 // import AsyncStorage from "@react-native-async-storage/async-storage";
 // import uploadData from "../../config/bulkupload";
-// import {restaurants} from "../../store/restaurants";
+import {restaurants} from "../../store/restaurants";
 
 export default function Home() {
-  // const router = useRouter();
-  const [restaurants, setRestaurants] = useState([]);
+  const router = useRouter();
+  // const [restaurants, setRestaurants] = useState([]);
   // const temp = async () => {
   //   const value = await AsyncStorage.getItem("isGuest");
   //   const email = await AsyncStorage.getItem("userEmail");
   //   console.log(value, email);
   // };
 
+
+
   const renderItem = ({ item }) => (
     <TouchableOpacity
-      // onPress={() => router.push(`/restaurant/${item.name}`)}
+      onPress={() => router.push(`/restaurant/${item.name}`)}
       className="bg-[#5f5f5f] max-h-64 max-w-xs flex justify-center rounded-lg p-4 mx-4 shadow-md"
     >
       <Image
@@ -50,19 +52,18 @@ export default function Home() {
     </TouchableOpacity>
   );
 
-  const getRestaurants = async () => {
-    const q = query(collection(db, "restaurants"));
-    // const q = query
-    const res = await getDocs(q);
+  // const getRestaurants = async () => {
+  //   const q = query(collection(db, "restaurants"));
+  //   const res = await getDocs(q);
 
-    res.forEach((item) => {
-      setRestaurants((prev) => [...prev, item.data()]);
-    });
-  };
-  useEffect(() => {
-    getRestaurants();
-    // temp();
-  }, []);
+  //   res.forEach((item) => {
+  //     setRestaurants((prev) => [...prev, item.data()]);
+  //   });
+  // };
+  // useEffect(() => {
+  //   getRestaurants();
+  //   temp();
+  // }, []);
 
   return (
     <SafeAreaView

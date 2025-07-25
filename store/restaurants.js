@@ -94,7 +94,7 @@ const restaurants = [
   {
     address: "789 Bourbon Street, Suite 300, New Orleans, LA 70116",
     closing: "01:00",
-    image: "https://images.pexels.com/photos/67468/pexels-photo-67468.jpeg",
+    image: "https://images.pexels.com/photos/1058277/pexels-photo-1058277.jpeg",
     name: "Bourbon Street Grill",
     opening: "11:00",
     seats: 110,
@@ -250,7 +250,7 @@ const carouselImages = [
 ];
 
 
-export { restaurants, carouselImages };
+
 
 const slots = [
   {
@@ -316,4 +316,4 @@ const slots = [
   },
 ];
 
-export { slots };
+export { restaurants, carouselImages, slots };
