@@ -70,3 +70,7 @@ export default function Index() {
     </SafeAreaView>
   );
 }
+
+Index.options = {
+  headerShown: false,
+};
