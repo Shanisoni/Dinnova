@@ -15,21 +15,29 @@ import React, { useEffect, useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { BlurView } from "expo-blur";
 // Update the import path or filename to match the actual file
-
 import logo from "../../assets/images/DineTimeLogo.png";
 import banner from "../../assets/images/homeBanner.png";
 // import { collection, getDocs, query } from "firebase/firestore";
 // import { db } from "../../config/firebaseConfig";
-import AsyncStorage from "@react-native-async-storage/async-storage";
+// import AsyncStorage from "@react-native-async-storage/async-storage";
+import uploadData from "../../config/bulkupload";
+import {restaurants} from "../../store/restaurants";
 
 export default function Home() {
   const router = useRouter();
-  const [restaurants, setRestaurants] = useState([]);
-  const temp = async () => {
-    const value = await AsyncStorage.getItem("isGuest");
-    const email = await AsyncStorage.getItem("userEmail");
-    console.log(value, email);
-  };
+  // const [restaurants, setRestaurants] = useState([]);
+  // const temp = async () => {
+  //   const value = await AsyncStorage.getItem("isGuest");
+  //   const email = await AsyncStorage.getItem("userEmail");
+  //   console.log(value, email);
+  // };
+
+
+  // useEffect(() => {
+  //   uploadData();
+  // }, []);
+
+  // uploadData();
 
   const renderItem = ({ item }) => (
     <TouchableOpacity
