@@ -2,7 +2,7 @@ const restaurants = [
   {
     name: "Sea Grill of Merrick Park",
     seats: 50,
-    image: "https://res.cloudinary.com/dl7e8qndf/image/upload/v1749545782/new_itphoc.jpg",
+    image: "https://images.pexels.com/photos/1581384/pexels-photo-1581384.jpeg",
     address: "4250 Salzedo Street, Suite 1425, Coral Gables, FL 33146",
     opening: "11:30",
     closing: "23:00",
@@ -109,7 +109,7 @@ const restaurants = [
   },
 ];
 
-export { restaurants };
+export default restaurants ;
 
 
 

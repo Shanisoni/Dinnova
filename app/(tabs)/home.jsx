@@ -21,7 +21,7 @@ import banner from "../../assets/images/homeBanner.png";
 // import { db } from "../../config/firebaseConfig";
 // import AsyncStorage from "@react-native-async-storage/async-storage";
 import uploadData from "../../config/bulkupload";
-import {restaurants} from "../../store/restaurants";
+import restaurants from "../../store/restaurants";
 
 export default function Home() {
   const router = useRouter();
@@ -33,11 +33,11 @@ export default function Home() {
   // };
 
 
-  // useEffect(() => {
-  //   uploadData();
-  // }, []);
+  useEffect(() => {
+    uploadData();
+  }, []);
 
-  // uploadData();
+  uploadData();
 
   const renderItem = ({ item }) => (
     <TouchableOpacity
@@ -57,18 +57,18 @@ export default function Home() {
     </TouchableOpacity>
   );
 
-//   const getRestaurants = async () => {
-//     const q = query(collection(db, "restaurants"));
-//     const res = await getDocs(q);
+  // const getRestaurants = async () => {
+  //   const q = query(collection(db, "restaurants"));
+  //   const res = await getDocs(q);
 
-//     res.forEach((item) => {
-//       setRestaurants((prev) => [...prev, item.data()]);
-//     });
-//   };
-//   useEffect(() => {
-//     getRestaurants();
-//     temp();
-//   }, []);
+  //   res.forEach((item) => {
+  //     setRestaurants((prev) => [...prev, item.data()]);
+  //   });
+  // };
+  // useEffect(() => {
+  //   getRestaurants();
+  //   temp();
+  // }, []);
 
   return (
     <SafeAreaView
