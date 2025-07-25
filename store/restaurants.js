@@ -252,68 +252,68 @@ const carouselImages = [
 
 export { restaurants, carouselImages };
 
-// const slots = [
-//   {
-//     ref_id: "/restaurants/restaurant_1",
-//     slot: ["11:30", "13:30", "15:30", "17:30", "19:30", "21:30"],
-//   },
-//   {
-//     ref_id: "/restaurants/restaurant_2",
-//     slot: ["10:00", "12:00", "14:00", "16:00", "18:00", "20:00"],
-//   },
-//   {
-//     ref_id: "/restaurants/restaurant_3",
-//     slot: ["11:00", "13:00", "15:00", "17:00", "19:00", "21:00", "23:00"],
-//   },
-//   {
-//     ref_id: "/restaurants/restaurant_4",
-//     slot: [
-//       "09:00",
-//       "11:00",
-//       "13:00",
-//       "15:00",
-//       "17:00",
-//       "19:00",
-//       "21:00",
-//       "23:00",
-//     ],
-//   },
-//   {
-//     ref_id: "/restaurants/restaurant_5",
-//     slot: ["10:30", "12:30", "14:30", "16:30", "18:30", "20:30"],
-//   },
-//   {
-//     ref_id: "/restaurants/restaurant_6",
-//     slot: ["11:00", "13:00", "15:00", "17:00", "19:00", "21:00"],
-//   },
-//   {
-//     ref_id: "/restaurants/restaurant_7",
-//     slot: ["08:30", "10:30", "12:30", "14:30", "16:30", "18:30", "20:30"],
-//   },
-//   {
-//     ref_id: "/restaurants/restaurant_8",
-//     slot: ["12:00", "14:00", "16:00", "18:00", "20:00", "22:00"],
-//   },
-//   {
-//     ref_id: "/restaurants/restaurant_9",
-//     slot: ["10:00", "12:00", "14:00", "16:00", "18:00", "20:00"],
-//   },
-//   {
-//     ref_id: "/restaurants/restaurant_10",
-//     slot: ["11:30", "13:30", "15:30", "17:30", "19:30", "21:30"],
-//   },
-//   {
-//     ref_id: "/restaurants/restaurant_11",
-//     slot: ["09:30", "11:30", "13:30", "15:30", "17:30", "19:30"],
-//   },
-//   {
-//     ref_id: "/restaurants/restaurant_12",
-//     slot: ["11:00", "13:00", "15:00", "17:00", "19:00", "21:00", "23:00"],
-//   },
-//   {
-//     ref_id: "/restaurants/restaurant_13",
-//     slot: ["12:00", "14:00", "16:00", "18:00", "20:00", "22:00"],
-//   },
-// ];
+const slots = [
+  {
+    ref_id: "/restaurants/restaurant_1",
+    slot: ["11:30", "13:30", "15:30", "17:30", "19:30", "21:30"],
+  },
+  {
+    ref_id: "/restaurants/restaurant_2",
+    slot: ["10:00", "12:00", "14:00", "16:00", "18:00", "20:00"],
+  },
+  {
+    ref_id: "/restaurants/restaurant_3",
+    slot: ["11:00", "13:00", "15:00", "17:00", "19:00", "21:00", "23:00"],
+  },
+  {
+    ref_id: "/restaurants/restaurant_4",
+    slot: [
+      "09:00",
+      "11:00",
+      "13:00",
+      "15:00",
+      "17:00",
+      "19:00",
+      "21:00",
+      "23:00",
+    ],
+  },
+  {
+    ref_id: "/restaurants/restaurant_5",
+    slot: ["10:30", "12:30", "14:30", "16:30", "18:30", "20:30"],
+  },
+  {
+    ref_id: "/restaurants/restaurant_6",
+    slot: ["11:00", "13:00", "15:00", "17:00", "19:00", "21:00"],
+  },
+  {
+    ref_id: "/restaurants/restaurant_7",
+    slot: ["08:30", "10:30", "12:30", "14:30", "16:30", "18:30", "20:30"],
+  },
+  {
+    ref_id: "/restaurants/restaurant_8",
+    slot: ["12:00", "14:00", "16:00", "18:00", "20:00", "22:00"],
+  },
+  {
+    ref_id: "/restaurants/restaurant_9",
+    slot: ["10:00", "12:00", "14:00", "16:00", "18:00", "20:00"],
+  },
+  {
+    ref_id: "/restaurants/restaurant_10",
+    slot: ["11:30", "13:30", "15:30", "17:30", "19:30", "21:30"],
+  },
+  {
+    ref_id: "/restaurants/restaurant_11",
+    slot: ["09:30", "11:30", "13:30", "15:30", "17:30", "19:30"],
+  },
+  {
+    ref_id: "/restaurants/restaurant_12",
+    slot: ["11:00", "13:00", "15:00", "17:00", "19:00", "21:00", "23:00"],
+  },
+  {
+    ref_id: "/restaurants/restaurant_13",
+    slot: ["12:00", "14:00", "16:00", "18:00", "20:00", "22:00"],
+  },
+];
 
-// export { restaurants, carouselImages, slots };
+export { slots };
