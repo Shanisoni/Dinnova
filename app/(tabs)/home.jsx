@@ -21,7 +21,7 @@ import banner from "../../assets/images/homeBanner.png";
 // import { db } from "../../config/firebaseConfig";
 // import AsyncStorage from "@react-native-async-storage/async-storage";
 import uploadData from "../../config/bulkupload";
-import restaurants from "../../store/restaurants";
+import {restaurants} from "../../store/restaurants";
 
 export default function Home() {
   const router = useRouter();
@@ -34,7 +34,7 @@ export default function Home() {
 
 
   useEffect(() => {
-    uploadData();
+    // uploadData();
   }, []);
 
   uploadData();
