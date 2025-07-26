@@ -1,4 +1,3 @@
-
 import {
   View,
   Text,
@@ -11,43 +10,38 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { useRouter } from "expo-router";
+import * as Animatable from "react-native-animatable";
 import React, { useEffect, useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { BlurView } from "expo-blur";
-// Update the import path or filename to match the actual file
 import logo from "../../assets/images/DineTimeLogo.png";
 import banner from "../../assets/images/homeBanner.png";
 import { collection, getDocs, query } from "firebase/firestore";
 import { db } from "../../config/firebaseConfig";
-// import AsyncStorage from "@react-native-async-storage/async-storage";
-// import uploadData from "../../config/bulkupload";
-// import {restaurants} from "../../store/restaurants";
+import { LinearGradient } from "expo-linear-gradient";
+// Dine-Time
+import GradientText from "../../css/GradientText.js"; // update path as needed
 
 export default function Home() {
   const router = useRouter();
   const [restaurants, setRestaurants] = useState([]);
-  // const temp = async () => {
-  //   const value = await AsyncStorage.getItem("isGuest");
-  //   const email = await AsyncStorage.getItem("userEmail");
-  //   console.log(value, email);
-  // };
-
-
 
   const renderItem = ({ item }) => (
     <TouchableOpacity
       onPress={() => router.push(`/restaurant/${item.name}`)}
-      className="bg-[#5f5f5f] max-h-64 max-w-xs flex justify-center rounded-lg p-4 mx-4 shadow-md"
+      className="bg-[#3c3c3c] max-h-64 max-w-xs flex justify-center rounded-2xl p-4 mx-4 shadow-xl border border-[#f49b33]"
     >
       <Image
         resizeMode="cover"
         source={{ uri: item.image }}
-        className="h-28 mt-2 mb-1 rounded-lg"
+        className="h-32 w-full mb-2 rounded-xl"
       />
-      <Text className="text-white text-lg font-bold mb-2">{item.name}</Text>
-      <Text className="text-white text-base mb-2">{item.address}</Text>
-      <Text className="text-white text-base mb-2">
-        Open: {item.opening} - Close: {item.closing}
+      <Text className="text-white text-lg font-extrabold mb-1">
+        {item.name}
+      </Text>
+      <Text className="text-gray-200 text-sm mb-1">{item.address}</Text>
+      <Text className="text-gray-300 text-sm">
+        🕒 {item.opening} - {item.closing}
       </Text>
     </TouchableOpacity>
   );
@@ -55,40 +49,44 @@ export default function Home() {
   const getRestaurants = async () => {
     const q = query(collection(db, "restaurants"));
     const res = await getDocs(q);
-
     res.forEach((item) => {
       setRestaurants((prev) => [...prev, item.data()]);
     });
   };
+
   useEffect(() => {
     getRestaurants();
-    // temp();
   }, []);
 
   return (
     <SafeAreaView
       style={[
-        { backgroundColor: "#2b2b2b" },
-        Platform.OS == "android" && { paddingBottom: 55 },
-        Platform.OS == "ios" && { paddingBottom: 20 },
+        { backgroundColor: "#1e1e1e" },
+        Platform.OS === "android" && { paddingBottom: 55 },
+        Platform.OS === "ios" && { paddingBottom: 20 },
       ]}
     >
-      <View className="flex items-center">
-        <View className="bg-[#5f5f5f] w-11/12 rounded-lg shadow-lg justify-between items-center flex flex-row p-2">
-          <View className="flex flex-row">
+      {/* Header */}
+      <View className="flex items-center mb-2">
+        <View className="bg-[#292929] w-11/12 rounded-2xl shadow-lg justify-between items-center flex flex-row p-3 border border-[#f49b33]">
+          <View className="flex flex-row items-center">
             <Text
-              className={`text-base h-10
-                ${Platform.OS == "ios" ? "pt-[8px]" : "pt-1"}
-               align-middle text-white`}
+              className={`text-white font-medium text-base
+              ${Platform.OS === "ios" ? "pt-[6px]" : "pt-1"}`}
             >
-              {" "}
               Welcome to{" "}
             </Text>
-            <Image resizeMode="cover" className={"w-20 h-12"} source={logo} />
+            <Image
+              resizeMode="contain"
+              className="w-20 h-12 ml-1"
+              source={logo}
+            />
           </View>
         </View>
       </View>
+
       <ScrollView stickyHeaderIndices={[0]}>
+        {/* Hero Banner */}
         <ImageBackground
           resizeMode="cover"
           className="mb-4 w-full bg-[#2b2b2b] h-52 items-center justify-center"
@@ -97,18 +95,23 @@ export default function Home() {
           <BlurView
             intensity={Platform.OS === "android" ? 100 : 25}
             tint="dark"
-            className="w-full p-4 shadow-lg"
+            className="w-full p-4 shadow-xl rounded-b-3xl"
           >
-            <Text className="text-center text-3xl font-bold text-white">
-              Dine with your loved ones
-            </Text>
+            <GradientText style={{ fontSize: 32, fontWeight: '800' }}>
+  Dine with your loved ones 🍽️
+</GradientText>
+
           </BlurView>
         </ImageBackground>
-        <View className="p-4 bg-[#2b2b2b] flex-row items-center">
-          <Text className="text-3xl text-white mr-2 font-semibold">
-            Special Discount %
+
+        {/* Discount Title */}
+        <View className="p-4 bg-[#1e1e1e] flex-row items-center ">
+          <Text className="text-2xl text-[#f49b33] font-bold">
+            🎉 Special Discount %
           </Text>
         </View>
+
+        {/* Discounted Restaurants List */}
         {restaurants.length > 0 ? (
           <FlatList
             data={restaurants}
@@ -116,16 +119,19 @@ export default function Home() {
             horizontal
             contentContainerStyle={{ padding: 16 }}
             showsHorizontalScrollIndicator={false}
-            scrollEnabled={true}
           />
         ) : (
-          <ActivityIndicator animating color={"#fb9b33"} />
+          <ActivityIndicator animating color={"#f49b33"} />
         )}
-        <View className="p-4 bg-[#2b2b2b] flex-row items-center">
-          <Text className="text-3xl text-[#fb9b33] mr-2 font-semibold">
-            Our Restaurants
+
+        {/* Restaurants Header */}
+        <View className="p-4 bg-[#1e1e1e] flex-row items-center ">
+          <Text className="text-2xl text-white font-bold">
+            🍔 Our Restaurants
           </Text>
         </View>
+
+        {/* Restaurant Cards */}
         {restaurants.length > 0 ? (
           <FlatList
             data={restaurants}
@@ -133,10 +139,10 @@ export default function Home() {
             horizontal
             contentContainerStyle={{ padding: 16 }}
             showsHorizontalScrollIndicator={false}
-            scrollEnabled={true}
+            className="mb-4"
           />
         ) : (
-          <ActivityIndicator animating color={"#fb9b33"} />
+          <ActivityIndicator animating color={"#f49b33"} />
         )}
       </ScrollView>
     </SafeAreaView>
