@@ -109,7 +109,7 @@ const restaurants = [
   },
 ];
 
-// export default restaurants ;
+
 
 
 
@@ -249,8 +249,7 @@ const carouselImages = [
   },
 ];
 
-
-
+// export  {restaurants , carouselImages};
 
 const slots = [
   {
@@ -317,3 +316,4 @@ const slots = [
 ];
 
 export { restaurants, carouselImages, slots };
+// export   { restaurants };
