@@ -150,7 +150,7 @@ const FindSlots = ({
                     </View>
                     <Text className="text-[#f49b33] mt-4 mb-2">Name</Text>
                     <TextInput
-                      className="h-13 border border-white text-white rounded px-2"
+                      className="h-11 border border-white text-white rounded px-2"
                       onChangeText={handleChange("fullName")}
                       value={values.fullName}
                       onBlur={handleBlur("fullName")}
@@ -165,7 +165,7 @@ const FindSlots = ({
                       Phone Number
                     </Text>
                     <TextInput
-                      className="h-13 border border-white text-white rounded px-2"
+                      className="h-11 border border-white text-white rounded px-2"
                       onChangeText={handleChange("phoneNumber")}
                       value={values.phoneNumber}
                       onBlur={handleBlur("phoneNumber")}
