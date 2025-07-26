@@ -41,7 +41,7 @@ const Signup = () => {
 
   const handleGuest = async () => {
     await AsyncStorage.setItem("isGuest", "true");
-    router.push("/(auth)/home");
+    router.push("/home");
   };
 
   const handleSignup = async (values) => {
@@ -104,7 +104,7 @@ const Signup = () => {
                 <View className="w-full">
                   <Text className="text-[#f49b33] mt-4 mb-2">Email</Text>
                   <TextInput
-                    className="h-10 border border-white text-white rounded px-2"
+                    className="h-9 border border-white text-white rounded px-2"
                     keyboardType="email-address"
                     onChangeText={handleChange("email")}
                     value={values.email}
@@ -118,7 +118,7 @@ const Signup = () => {
                   )}
                   <Text className="text-[#f49b33] mt-4 mb-2">Password</Text>
                   <TextInput
-                    className="h-10 border border-white text-white rounded px-2"
+                    className="h-9 border border-white text-white rounded px-2"
                     secureTextEntry
                     onChangeText={handleChange("password")}
                     value={values.password}
