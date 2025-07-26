@@ -10,7 +10,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { useRouter } from "expo-router";
-import * as Animatable from "react-native-animatable";
+// import * as Animatable from "react-native-animatable";
 import React, { useEffect, useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { BlurView } from "expo-blur";
@@ -18,7 +18,7 @@ import logo from "../../assets/images/DineTimeLogo.png";
 import banner from "../../assets/images/homeBanner.png";
 import { collection, getDocs, query } from "firebase/firestore";
 import { db } from "../../config/firebaseConfig";
-import { LinearGradient } from "expo-linear-gradient";
+// import { LinearGradient } from "expo-linear-gradient";
 // Dine-Time
 import GradientText from "../../css/GradientText.js"; // update path as needed
 
@@ -97,10 +97,9 @@ export default function Home() {
             tint="dark"
             className="w-full p-4 shadow-xl rounded-b-3xl"
           >
-            <GradientText style={{ fontSize: 32, fontWeight: '800' }}>
-  Dine with your loved ones 🍽️
-</GradientText>
-
+            <GradientText style={{ fontSize: 33, fontWeight: "800", marginTop: 19 }}>
+              Dine with your loved ones 🍽️
+            </GradientText>
           </BlurView>
         </ImageBackground>
 
