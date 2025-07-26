@@ -15,13 +15,13 @@ import logo from "../../assets/images/DineTimeLogo.png";
 const entryImg = require("../../assets/images/Frame.png");
 import { Formik } from "formik";
 import validationSchema from "../../utils/authSchema";
-// import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-// import { doc, getDoc, getFirestore } from "firebase/firestore";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { doc, getDoc, getFirestore } from "firebase/firestore";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 const Signup = () => {
   const router = useRouter();
-//   const auth = getAuth();
-//   const db = getFirestore();
+  const auth = getAuth();
+  const db = getFirestore();
   const handleGuest = async () => {
     await AsyncStorage.setItem("isGuest", "true");
     router.push("/home");
@@ -68,7 +68,7 @@ const Signup = () => {
         <View className="m-2 flex justify-center items-center">
           <Image source={logo} style={{ width: 200, height: 100 }} />
           <Text className="text-lg text-center text-white  font-bold mb-10">
-            Let&apos;s get you started
+            Let&#39;s get you started
           </Text>
 
           <View className="w-5/6">
