@@ -37,6 +37,19 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "b1ee96a8-3725-4579-81a9-02a6f28f81b2"
+      }
+    },
+    "owner": "shanisoni",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/b1ee96a8-3725-4579-81a9-02a6f28f81b2"
     }
   }
 }

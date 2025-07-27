@@ -97,7 +97,7 @@ export default function Home() {
             tint="dark"
             className="w-full p-4 shadow-xl rounded-b-3xl"
           >
-            <GradientText style={{ fontSize: 33, fontWeight: "800", marginTop: 19 }}>
+            <GradientText style={{ fontSize: 30, fontWeight: "800", marginTop: 19 }}>
               Dine with your loved ones 🍽️
             </GradientText>
           </BlurView>
