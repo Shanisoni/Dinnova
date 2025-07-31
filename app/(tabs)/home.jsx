@@ -66,6 +66,8 @@ export default function Home() {
         Platform.OS === "ios" && { paddingBottom: 20 },
       ]}
     >
+
+      
       {/* Header */}
       <View className="flex items-center mb-2">
         <View className="bg-[#292929] w-11/12 rounded-2xl shadow-lg justify-between items-center flex flex-row p-3 border border-[#f49b33]">
