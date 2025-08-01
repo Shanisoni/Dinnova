@@ -22,6 +22,8 @@ import { db } from "../../config/firebaseConfig";
 // Dine-Time
 import GradientText from "../../css/GradientText.js"; // update path as needed
 
+
+
 export default function Home() {
   const router = useRouter();
   const [restaurants, setRestaurants] = useState([]);
