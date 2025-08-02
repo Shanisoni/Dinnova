@@ -18,6 +18,9 @@ import {
 } from "firebase/firestore";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
+
+
+
 const History = () => {
   const [userEmail, setUserEmail] = useState(null);
   const [bookings, setBookings] = useState([]);
@@ -34,6 +37,8 @@ const History = () => {
     };
     fetchUserEmail();
   }, []);
+
+
 
   const fetchBookings = async () => {
     if (!userEmail) return;
@@ -61,6 +66,8 @@ const History = () => {
     }
   };
 
+
+
   useEffect(() => {
     fetchBookings();
   }, [userEmail]);
@@ -78,6 +85,8 @@ const History = () => {
       </SafeAreaView>
     );
   }
+
+
 
   return (
     <SafeAreaView className="flex-1 bg-[#1c1c1e] px-4">
