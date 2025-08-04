@@ -114,6 +114,7 @@ export default function Home() {
           </Text>
         </View>
 
+
         {/* Discounted Restaurants List */}
         {restaurants.length > 0 ? (
           <FlatList
@@ -127,12 +128,14 @@ export default function Home() {
           <ActivityIndicator animating color={"#f49b33"} />
         )}
 
+
         {/* Restaurants Header */}
         <View className="p-4 bg-[#1e1e1e] flex-row items-center ">
           <Text className="text-2xl text-white font-bold">
             🍔 Our Restaurants
           </Text>
         </View>
+
 
         {/* Restaurant Cards */}
         {restaurants.length > 0 ? (
