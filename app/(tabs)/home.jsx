@@ -8,6 +8,8 @@ import {
   FlatList,
   ActivityIndicator,
   TouchableOpacity,
+
+
 } from "react-native";
 import { useRouter } from "expo-router";
 // import * as Animatable from "react-native-animatable";
@@ -147,8 +149,13 @@ export default function Home() {
             showsHorizontalScrollIndicator={false}
             className="mb-4"
           />
+
+
+
         ) : (
           <ActivityIndicator animating color={"#f49b33"} />
+
+          
         )}
       </ScrollView>
     </SafeAreaView>
