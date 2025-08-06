@@ -91,6 +91,9 @@ export default function Home() {
         </View>
       </View>
 
+
+
+
       <ScrollView stickyHeaderIndices={[0]}>
         {/* Hero Banner */}
         <ImageBackground
@@ -115,6 +118,10 @@ export default function Home() {
             🎉 Special Discount %
           </Text>
         </View>
+
+
+
+
 
 
         {/* Discounted Restaurants List */}
