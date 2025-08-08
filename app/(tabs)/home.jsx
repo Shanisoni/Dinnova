@@ -145,7 +145,7 @@ export default function Home() {
           </Text>
         </View>
 
-
+        {/* Restaurant Cards Header */}
         {/* Restaurant Cards */}
         {restaurants.length > 0 ? (
           <FlatList
