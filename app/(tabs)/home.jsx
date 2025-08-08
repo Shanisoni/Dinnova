@@ -157,6 +157,16 @@ export default function Home() {
             className="mb-4"
           />
 
+          // <FlatList
+          //   data={restaurants}
+          //   renderItem={renderItem}
+          //   horizontal
+          //   contentContainerStyle={{ padding: 16 }}
+          //   showsHorizontalScrollIndicator={false}
+          //   className="mb-4"
+          // />
+
+
 
 
         ) : (
