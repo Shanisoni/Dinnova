@@ -71,6 +71,7 @@ const FindSlots = ({
       console.log(error);
     }
   };
+
   return (
     <View className="flex-1">
       <View className={`flex ${selectedSlot != null && "flex-row"} `}>
@@ -185,8 +186,18 @@ const FindSlots = ({
                         Submit
                       </Text>
                     </TouchableOpacity>
+                    {/* <TouchableOpacity
+                      onPress={handleSubmit}
+                      className="p-2 my-2 bg-[#f49b33]  text-black rounded-lg mt-10"
+                    >
+                      <Text className="text-lg font-semibold text-center">
+                        Submit
+                      </Text>
+                    </TouchableOpacity> */}
                   </View>
                 )}
+
+
               </Formik>
             )}
           </View>
